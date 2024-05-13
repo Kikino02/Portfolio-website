@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Transition */
+a,
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 17vh;
+}
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+nav .nav-links a {
+  color: black;
+  text-decoration-color: white;
+}
+nav .nav-links a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(185, 185, 185);
+}
+nav .logo {
+  cursor: default;
+}
+nav .logo h2 {
+  font-size: 2rem;
+}
+
+#mobile-nav {
+  display: none;
+}
+#mobile-nav .hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+#mobile-nav .hamburger-menu .hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+#mobile-nav .hamburger-menu .hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background: black;
+  transition: all 0.45s ease-in-out;
+}
+#mobile-nav .hamburger-menu .hamburger-icon span:first-child {
+  transform: none;
+}
+#mobile-nav .hamburger-menu .hamburger-icon span:nth-child(2) {
+  opacity: 1;
+}
+#mobile-nav .hamburger-menu .hamburger-icon span:last-child {
+  transform: none;
+}
+#mobile-nav .hamburger-menu .open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+#mobile-nav .hamburger-menu .open span:nth-child(2) {
+  opacity: 0;
+}
+#mobile-nav .hamburger-menu .open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+#mobile-nav .hamburger-menu .dropdown-menu {
+  position: absolute;
+  top: 200%;
+  right: 50%;
+  background: white;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+#mobile-nav .hamburger-menu .dropdown-menu li {
+  padding: 0.7rem;
+}
+#mobile-nav .hamburger-menu .dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+#mobile-nav .hamburger-menu .dropdown-menu.open {
+  height: 300px;
+}/*# sourceMappingURL=styles.css.map */
