@@ -27,7 +27,8 @@ li {
 }
 
 .btn {
-  padding: 15px 20px;
+  padding: 15px;
+  width: 135px;
   border-radius: 50px;
   font-weight: 600;
   border: 1px solid black;
@@ -124,6 +125,7 @@ nav .logo h2 {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
+  z-index: 1000;
 }
 #mobile-nav .hamburger-menu .dropdown-menu li {
   padding: 0.7rem;
@@ -172,53 +174,49 @@ section:not(:first-child) .icon .bx {
 /* Section 1 */
 .main-section {
   display: flex;
-  height: 79vh;
-  justify-content: center;
-}
-.main-section .container {
-  display: flex;
-  align-items: center;
+  height: 80vh;
   justify-content: center;
   gap: 5rem;
 }
-.main-section .container .main-image {
+.main-section .main-image {
   display: flex;
   height: 400px;
   width: 400px;
-  margin: auto;
+  margin: auto 0;
 }
-.main-section .container .main-info {
+.main-section .main-info {
   text-align: center;
+  align-self: center;
 }
-.main-section .container .main-info p {
+.main-section .main-info p {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
-.main-section .container .main-info .title {
+.main-section .main-info .title {
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
 }
-.main-section .container .main-info .subtitle {
+.main-section .main-info .subtitle {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
-.main-section .container .main-info .main-buttons {
+.main-section .main-info .main-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
 }
-.main-section .container .main-info .main-buttons .download-btn:hover {
+.main-section .main-info .main-buttons .download-btn:hover {
   background-color: rgb(53, 53, 53);
   border: 1px solid rgb(53, 53, 53);
   color: white;
 }
-.main-section .container .main-info .main-buttons .contact-btn:hover {
+.main-section .main-info .main-buttons .contact-btn:hover {
   background-color: black;
 }
-.main-section .container .main-info .main-icons .bx {
+.main-section .main-info .main-icons .bx {
   font-size: 2rem;
   cursor: pointer;
 }
@@ -262,7 +260,7 @@ section:not(:first-child) .icon .bx {
   margin-bottom: 0.5rem;
 }
 .about-container .about-info .about-boxes .box h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -270,25 +268,25 @@ section:not(:first-child) .icon .bx {
   margin-bottom: 0.5rem;
 }
 
-.experience .exp-container {
+#experience .exp-container {
   display: flex;
   margin: 25vh 0;
   justify-content: center;
 }
-.experience .exp-container .exp-box {
+#experience .exp-container .exp-box {
   padding: 1.5rem;
   background-color: white;
   border-radius: 40px;
   border: 1px solid rgb(53, 53, 53);
   text-align: center;
 }
-.experience .exp-container .exp-box h2 {
+#experience .exp-container .exp-box h2 {
   font-weight: 600;
   color: rgb(85, 85, 85);
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
-.experience .exp-container .exp-box .article-container {
+#experience .exp-container .exp-box .article-container {
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
@@ -296,12 +294,103 @@ section:not(:first-child) .icon .bx {
   gap: 2.5rem;
   justify-content: space-around;
 }
-.experience .exp-container .exp-box .article-container article {
+#experience .exp-container .exp-box .article-container article {
   display: flex;
   width: 10rem;
   justify-content: space-around;
+  align-items: center;
   gap: 0.5rem;
 }
-.experience .exp-container .exp-box .article-container article .bx {
+#experience .exp-container .exp-box .article-container article .bx {
   font-size: 2rem;
+}
+
+#projects .project-boxes {
+  display: flex;
+  gap: 2rem;
+  margin: 10rem 0;
+}
+#projects .project-boxes .project-box {
+  padding: 1.5rem;
+  flex: 1;
+  border-radius: 40px;
+  border: 1px solid rgb(163, 163, 163);
+  background-color: white;
+  text-align: center;
+}
+#projects .project-boxes .project-box .project-img {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+#projects .project-boxes .project-box .project-img img {
+  width: 90%;
+  height: 90%;
+  border-radius: 40px;
+}
+#projects .project-boxes .project-box h3 {
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+#projects .project-boxes .project-box .project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#projects .project-boxes .project-box .project-buttons .btn:hover {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  border: 1px solid rgb(53, 53, 53);
+}
+
+#contact {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact .contact-info {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(53, 53, 53);
+  border-radius: 40px;
+  padding: 10px;
+  margin: 32px auto;
+}
+#contact .contact-info .mail,
+#contact .contact-info .linkedin {
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  gap: 10px;
+}
+#contact .contact-info .mail .bx,
+#contact .contact-info .linkedin .bx {
+  font-size: 1.8rem;
+}
+#contact .contact-info .mail p,
+#contact .contact-info .linkedin p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#contact .contact-info .mail p a,
+#contact .contact-info .linkedin p a {
+  color: black;
+  text-decoration-color: white;
+}
+#contact .contact-info .mail p a:hover,
+#contact .contact-info .linkedin p a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(185, 185, 185);
+}
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+footer p {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
